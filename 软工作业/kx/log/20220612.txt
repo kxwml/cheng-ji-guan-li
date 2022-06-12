@@ -1,0 +1,599 @@
+------------------------------
+2022/06/12 19:19:26
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = ''
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:45
+select * from users where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:45
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:51
+select user_name,course_name,course_id,user_id,stu_num,nick from users left join course on 
+    users.user_id = course.course_teaid where course_name is not null
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,stu_num,nick from course,users where users.user_id = course.course_teaid
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学物理'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学英语'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据库'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '软件工程'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据结构'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:55
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = 'C++'
+
+------------------------------
+
+------------------------------
+2022/06/12 19:19:58
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 19:20:02
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:10:21
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,stu_num,nick from course,users where users.user_id = course.course_teaid
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学物理'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学英语'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据库'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '软件工程'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据结构'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:49
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = 'C++'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:24:54
+select user_name,course_name,course_id,user_id,stu_num,nick from users left join course on 
+    users.user_id = course.course_teaid where course_name is not null
+
+------------------------------
+
+------------------------------
+2022/06/12 21:25:05
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 21:25:07
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:33:50
+select * from users where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:33:50
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:33:53
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:33:53
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:33:57
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:34:00
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:34:00
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:34:08
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:34:08
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:34:08
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:04
+select * from users where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:04
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:08
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:08
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:12
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:51
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:51:51
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:52:21
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:52:30
+select * from users where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:52:30
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:53:42
+select user_name,course_name,course_id,user_id,stu_num,nick from users left join course on 
+    users.user_id = course.course_teaid where course_name is not null
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:15
+select * from users where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:15
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:16
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:16
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:55
+select * from users where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:55:55
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,stu_num,nick from course,users where users.user_id = course.course_teaid
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学物理'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学英语'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据库'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '软件工程'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据结构'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:57:17
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = 'C++'
+
+------------------------------
+
+------------------------------
+2022/06/12 21:59:38
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:36
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:37
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:38
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:48
+select * from users where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:48
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:52
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id 
+                               and stu_course.course_id = course.course_id and user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:00:53
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:01:05
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id 
+                               and stu_course.course_id = course.course_id and user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:01:25
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:38:37
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id 
+                               and stu_course.course_id = course.course_id and user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:40:31
+select * from users where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:40:31
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:41:07
+select user_name,course_name,course_id,user_id,stu_num,nick from users left join course on 
+    users.user_id = course.course_teaid where course_name is not null
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,stu_num,nick from course,users where users.user_id = course.course_teaid
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学物理'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学英语'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据库'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '软件工程'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据结构'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:00
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = 'C++'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:13
+select user_name,course_name,course_id,user_id,stu_num,nick from users left join course on 
+    users.user_id = course.course_teaid where course_name is not null
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,stu_num,nick from course,users where users.user_id = course.course_teaid
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学物理'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学英语'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据库'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '软件工程'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '数据结构'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = '大学体育'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:42:34
+select course_name,nick,stunum,class from stu_course,course,users where stu_course.course_id = course.course_id and stu_course.stu_id = users.user_id and course_name = 'C++'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:43:36
+select stunum,nick,course_name,sum,score1,score2,score3,score4,user_id,stu_course.course_id 
+from users,course,stu_course where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id
+
+------------------------------
+
+------------------------------
+2022/06/12 22:45:43
+select * from users where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:45:43
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:46:22
+select course_name,course_id from users,course where users.user_id = course.course_teaid and user_name = 'tea1'
+
+------------------------------
+
+------------------------------
+2022/06/12 22:46:22
+select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '大学体育'
+
+------------------------------
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学生首页--学生成绩管理系统</title>
+  <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+  <script src="view/assets/js/html5shiv.min.js"></script>
+  <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="margin: auto;" href="index.php">学生成绩查询系统</a>
+      <a class="navbar-brand" style="margin: auto;" href="stuscore.php">课程信息</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <a type="button" class="btn btn-success" href="logout.php">退出</a>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--头部-->
+<div class="jumbotron text-center">
+  <div style="margin: 20px;">
+    <p>学生成绩管理系统</p><p>学生首页</p>
+  </div>
+</div>
+<!--主体部分-->
+<div class="container text-center">
+  <div class="page-header">
+    <h1>您已经成功登录 <small>学生成绩管理系统</small></h1>
+  </div>
+  <div class="alert alert-success text-center" role="alert">
+    欢迎您！<?php echo $user['user_name'];?> <span class="label label-primary"><?php echo $user['user_role'];?></span>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">可以做些什么？</h3>
+    </div>
+    <div class="panel-body text-center" style="height: 300px;">
+      <article style="font-size: 20px;">
+        快来查看你的成绩吧！
+      </article>
+    </div>
+  </div>
+</div>
+
+<!--页尾-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Copyright © 200601710030蒯鑫 学生成绩管理系统</p>
+</div>
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo $res;?>--出错了！</title>
+    <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+    <script src="view/assets/js/html5shiv.min.js"></script>
+    <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="margin: auto;" href="login.php">学生成绩管理系统</a>
+        </div>
+    </div>
+</nav>
+<!--头部-->
+<div class="jumbotron text-center">
+    <div style="margin: 20px;">
+        <p>学生成绩管理系统</p><p>信息提示</p>
+    </div>
+</div>
+<!--主体部分-->
+<div class="container">
+    <?php if ($result == 'succ') { ?>
+    <div class="alert alert-success" role="alert" style="font-size: 20px;text-align: center;">
+        <strong>哦耶！</strong><span><br><?php echo $res;?></span><br>
+        <a href="<?php echo $url;?>" class="label label-info">点击返回</a>
+    </div>
+    <?php } else {?>
+    <div class="alert alert-danger" role="alert" style="font-size: 20px;text-align: center;">
+        <strong>哦不！</strong><span><br><?php echo $res;?></span><br>
+        <a href="<?php echo $url;?>" class="label label-info">点击返回</a>
+    </div>
+    <?php }?>
+</div>
+
+<!--页尾-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Copyright ©200601710030蒯鑫 学生成绩管理系统</p>
+</div>
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

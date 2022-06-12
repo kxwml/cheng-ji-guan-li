@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学生成绩管理系统</title>
+    <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+    <script src="view/assets/js/html5shiv.min.js"></script>
+    <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: 	#DCDCDC;
+    }
+    .loginBox{
+        border:2px solid 	#FFFAFA;
+        border-radius:25px;
+        width: 450px;
+        height: 225px;
+        position: fixed;
+        top: 40%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: 	#FFF5EE;
+        text-align: center;
+    }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="margin: auto;" href="index.php">学生成绩管理系统</a>
+        </div>
+        <!--跳转后台登录按钮-->
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <a type="button" class="btn btn-success" href="index.php">返回</a>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--登录框-->
+<div class="loginBox">
+            <h3>学生成绩管理系统</h3>
+            <form action="login.php" method="post" style="text-align: center">
+                <div class="input-group input-group-lg text-center" style="left: 20%">
+                    <span class="input-group-addon">账号</span>
+                    <input id="name" name="name" type="text" class="form-control" placeholder="请输入管理员账号" aria-describedby="sizing-addon1" style="width: 200px;text-align: center">
+                </div>
+                <div class="input-group input-group-lg" style="left: 20%">
+                    <span class="input-group-addon">密码</span>
+                    <input id="password" name="password" type="password" class="form-control" placeholder="请输入管理员密码" aria-describedby="sizing-addon1" style="width: 200px;text-align: center">
+                </div>
+                <div class="btn-group" role="group" aria-label="..." style="margin-top: 15px;">
+                    <button type="submit" class="btn btn-primary">登录</button>
+                    <a type="button" class="btn btn-primary" href="register.php">注册</a>
+                </div>
+            </form>
+</div>
+
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

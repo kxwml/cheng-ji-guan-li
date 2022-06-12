@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>成绩信息 - 学生成绩管理系统</title>
+  <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+  <script src="view/assets/js/html5shiv.min.js"></script>
+  <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="margin: auto;" href="teacher.php">学生成绩管理系统</a>
+      <a class="navbar-brand" style="margin: auto;" href="scoreinfo.php">成绩信息</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <a type="button" class="btn btn-success" href="logout.php">退出</a>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--头部-->
+<div class="jumbotron text-center">
+  <div style="margin: 20px;">
+    <p>学生成绩管理系统</p><p>成绩信息</p>
+  </div>
+</div>
+
+<!--主体部分-->
+<div class="container text-center">
+  <div class="alert alert-warning">以下是您授课课程以及学生成绩 <a class="btn btn-info" onclick="window.alert('打印成功！');">打印成绩单</a></div>
+  <?php foreach ($courses as $c ) {?>
+  <div class="panel panel-default">
+    <div class="panel-heading"><?php echo $c['course_name'];?><br><a href="changesum.php?course_id=<?php echo $c['course_id'];?>" class="label label-info">修改总分计算方式</a></div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table table-bordered tab-hover">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>课程</th>
+            <th>平时成绩</th>
+            <th>期中成绩</th>
+            <th>实验成绩</th>
+            <th>期末成绩</th>
+            <th>总评</th>
+            <th>操作</th>
+          </tr>
+          <tbody>
+          <?php
+          $num= 1;
+           $coursename = $c['course_name'];
+            $sql = "select * from stu_course,course,users where users.user_id = stu_course.stu_id and stu_course.course_id = course.course_id and course_name = '{$coursename}'";
+            $scores = mGetAll($sql);
+            foreach ($scores as $s){?>
+          <tr>
+            <td><?php echo $num;?></td>
+            <td><?php echo $s['stunum'];?></td>
+            <td><?php echo $s['nick'];?></td>
+            <td><?php echo $s['course_name'];?></td>
+            <td><?php echo $s['score1'];?></td>
+            <td><?php echo $s['score2'];?></td>
+            <td><?php echo $s['score3'];?></td>
+            <td><?php echo $s['score4'];?></td>
+            <td><?php echo $s['sum'];?></td>
+            <td><a href="scoreedit.php?user_id=<?php echo $s['user_id'];?>&course_id=<?php echo $s['course_id'];?>">录入</a> </td>
+          </tr>
+          <?php $num = $num +1;} ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <?php } ?>
+
+</div>
+<!--页尾-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Copyright ©200601710030蒯鑫 学生成绩管理系统</p>
+</div>
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

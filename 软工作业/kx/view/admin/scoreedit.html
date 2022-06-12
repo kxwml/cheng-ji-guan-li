@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>录入成绩 - 学生成绩管理系统</title>
+    <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+    <script src="view/assets/js/html5shiv.min.js"></script>
+    <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .table{
+        word-break:break-all; word-wrap:break-all;
+        /*    表格换行   */
+    }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="margin: auto;" href="teacher.php">学生成绩管理系统</a>
+            <a class="navbar-brand" style="margin: auto;" href="scoreinfo.php">成绩信息</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <a type="button" class="btn btn-success" href="logout.php">退出</a>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--头部-->
+<div class="jumbotron text-center">
+    <div style="margin: 20px;">
+        <p>学生成绩管理系统</p><p>录入成绩</p>
+    </div>
+</div>
+
+<!--主体部分-->
+<div class="container text-center">
+    <form action="" method="post">
+        <div class="table-responsive">
+            <table class="table table-bordered tab-hover">
+                <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>课程</th>
+                    <th>平时成绩(<?php echo $parts['way1'];?>)</th>
+                    <th>期中成绩(<?php echo $parts['way2'];?>)</th>
+                    <th>实验成绩(<?php echo $parts['way3'];?>)</th>
+                    <th>期末成绩(<?php echo $parts['way4'];?>)</th>
+                    <th>总评</th>
+                    <th>操作</th>
+                </tr>
+                <tbody>
+                <tr>
+                    <form action="" method="post">
+                    <td><?php echo $stu['stunum'];?></td>
+                    <td><?php echo $stu['nick'];?></td>
+                    <td><?php echo $stu['course_name'];?></td>
+                    <td><input id="score1" name="score1" type="text" value="<?php echo $stu['score1'];?>"></td>
+                    <td><input id="score2" name="score2" type="text" value="<?php echo $stu['score2'];?>"></td>
+                    <td><input id="score3" name="score3" type="text" value="<?php echo $stu['score3'];?>"></td>
+                    <td><input id="score4" name="score4" type="text" value="<?php echo $stu['score4'];?>"></td>
+                    <td><input style="width: 100px;" type="text" value="<?php echo $stu['sum'];?>" disabled></td>
+                    <td><button type="submit">提交</button></td>
+                    </form>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+<!--页尾-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Copyright ©200601710030蒯鑫 学生成绩管理系统</p>
+</div>
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

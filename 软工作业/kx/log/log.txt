@@ -1,0 +1,24 @@
+------------------------------
+2022/05/12 12:19:43
+select user_id,role_name from users left join role on users.role_id = role.role_id where user_name = 'admin'
+
+
+
+------------------------------
+2022/05/12 14:49:15
+select * from users where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/05/12 14:49:23
+select * from users where user_name = 'stu2'
+
+------------------------------
+
+------------------------------
+2022/05/12 14:49:23
+select user_id,role_name,nick from users left join role on users.role_id = role.role_id where user_name = 'stu2'
+
+------------------------------
+

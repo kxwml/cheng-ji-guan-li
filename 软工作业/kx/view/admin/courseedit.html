@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>编辑课程 - 学生成绩管理系统</title>
+  <link rel="stylesheet" href="view/assets/css/bootstrap.min.css">
+  <script src="view/assets/js/html5shiv.min.js"></script>
+  <script src="view/assets/js/respond.min.js"></script>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="margin: auto;" href="admin.php">学生成绩管理系统</a>
+      <a class="navbar-brand" style="margin: auto;" href="course.php">课程信息</a>
+      <a class="navbar-brand" style="margin: auto;" href="selectCourse.php">选课信息</a>
+      <a class="navbar-brand" style="margin: auto;" href="scorelist.php">成绩统计</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <a type="button" class="btn btn-success" href="logout.php">退出</a>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--头部-->
+<div class="jumbotron text-center">
+  <div style="margin: 20px;">
+    <p>学生成绩管理系统</p><p>编辑课程</p>
+  </div>
+</div>
+<!--主体部分-->
+<div class="container">
+  <div class="alert alert-warning text-center">
+    <b>提示！</b>&nbsp;<span>您正在编辑新课程</span>
+  </div>
+  <form action="" method="post">
+    <div class="panel panel-default">
+      <div class="panel-body text-center">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">课程名称</span>
+              <input value="<?php echo $oldcourse['course_name'];?>" type="text" class="form-control"  name="course_name" id="course_name" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">任课教师</span>
+              <select name="course_teaid" id="course_teaid" class="form-control">
+                <?php foreach ($teachers as $t ) {?>
+                <option value="<?php echo $t['user_id'];?>" <?php if($t['user_id'] == $oldcourse['course_teaid']) { ?>selected="selected"<?php }?>><?php echo $t['nick'];?></option>
+                <?php }?>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button style="margin-top: 15px;" type="submit" class="btn btn-info">提交</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--页尾-->
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Copyright ©200601710030蒯鑫 学生成绩管理系统</p>
+</div>
+<script src="view/assets/js/jquery.min.js"></script>
+<script src="view/assets/js/bootstrap.min.js"></script>
+</body>
+</html>
